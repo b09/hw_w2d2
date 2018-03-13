@@ -16,4 +16,9 @@ class BearTest < Minitest::Test
     assert_equal(1, @new_bear.bear_eats_fish(fish))
   end
 
+  def test_is_bear_starving
+    fish = @new_fish
+    assert_equal(false, @new_bear.bear_eats_fish(fish).is_starving?)
+  end
+
 end
