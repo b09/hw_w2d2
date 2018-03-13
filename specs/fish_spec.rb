@@ -5,10 +5,11 @@ require_relative("../fish")
 class FishTest < Minitest::Test
 
   def setup
-    piano = Instrument.new("Steinway Model Z", "piano")
-    bass = Instrument.new("Hofner", "bass")
-    guitar = Instrument.new("Gretsch", "guitar")
-    drums = Instrument.new("Ludwig", "drums")
+    @new_fish = Fish.new("Trout")
+  end
+
+  def test_fish_species
+    assert_equal("Trout", @new_fish.species)
   end
 
 end
